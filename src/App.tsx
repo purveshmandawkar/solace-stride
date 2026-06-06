@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+// @ts-expect-error - JSX file without types
+import Home from "./pages/Home.jsx";
 import Goals from "./pages/Goals";
 import Me from "./pages/Me";
 import BottomNav from "./components/BottomNav";

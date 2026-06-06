@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import indexCss from "../index.css?url";
 import App from "../App";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/$")({
   head: () => ({
     meta: [
       { title: "App" },
@@ -11,10 +11,10 @@ export const Route = createFileRoute("/")({
     ],
     links: [{ rel: "stylesheet", href: indexCss }],
   }),
-  component: IndexRoute,
+  component: SplatRoute,
 });
 
-function IndexRoute() {
+function SplatRoute() {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
